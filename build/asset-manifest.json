@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/bmmlatam/static/css/main.87d41d5a.css",
+    "main.js": "/bmmlatam/static/js/main.d2d88d25.js",
+    "static/media/lo6.jpg": "/bmmlatam/static/media/lo6.c20242bb32e0b967c2f8.jpg",
+    "static/media/lo5.jpg": "/bmmlatam/static/media/lo5.311222b9919fe074b70a.jpg",
+    "static/media/lo4.jpg": "/bmmlatam/static/media/lo4.ed1b0b68fb88c68ffc93.jpg",
+    "static/media/LitesOut-poster.png": "/bmmlatam/static/media/LitesOut-poster.7a83c518941441c914ee.png",
+    "static/media/lo3.jpg": "/bmmlatam/static/media/lo3.2ecda14f2603e81d1212.jpg",
+    "static/media/lo2.jpg": "/bmmlatam/static/media/lo2.21e8e41680b77e962828.jpg",
+    "static/media/lo1.jpg": "/bmmlatam/static/media/lo1.2ec423c1148ffd925130.jpg",
+    "static/media/hcc_thumb.JPG": "/bmmlatam/static/media/hcc_thumb.b3f7c36b1beb26ea8a00.JPG",
+    "static/media/springspec.png": "/bmmlatam/static/media/springspec.f2c81576ab5c1bca0a05.png",
+    "static/media/darshana.jpeg": "/bmmlatam/static/media/darshana.881b29084e6bb2a3567a.jpeg",
+    "static/media/NitesOut Gradient BG-rainbow.jpg": "/bmmlatam/static/media/NitesOut Gradient BG-rainbow.1ce03378aba0c8d717e3.jpg",
+    "static/media/NitesOut Gradient BG-rainbow2.jpg": "/bmmlatam/static/media/NitesOut Gradient BG-rainbow2.1ce03378aba0c8d717e3.jpg",
+    "static/media/NitesOut Gradient BG.jpg": "/bmmlatam/static/media/NitesOut Gradient BG.1ce03378aba0c8d717e3.jpg",
+    "static/media/frightnitenoto.jpg": "/bmmlatam/static/media/frightnitenoto.3119c518e3af07622a54.jpg",
+    "static/media/hsslogo.png": "/bmmlatam/static/media/hsslogo.26cd33a3276d10dedf7b.png",
+    "static/media/alt-BG.jpg": "/bmmlatam/static/media/alt-BG.8cb7bee77dab6c7b8e9b.jpg",
+    "static/media/sundarkhand.jpg": "/bmmlatam/static/media/sundarkhand.15e56bfb02b0106bfc68.jpg",
+    "static/media/ShriRam.png": "/bmmlatam/static/media/ShriRam.d7f9cdfa0d9b7f4171ef.png",
+    "static/media/AK_ramayan.jpg": "/bmmlatam/static/media/AK_ramayan.b2fb470f6ad4efc9f248.jpg",
+    "static/media/omLogo.png": "/bmmlatam/static/media/omLogo.9017ca16e2c5aaa141d7.png",
+    "static/media/NasheDi-txt.png": "/bmmlatam/static/media/NasheDi-txt.5020fd63dddf57263dfe.png",
+    "index.html": "/bmmlatam/index.html",
+    "main.87d41d5a.css.map": "/bmmlatam/static/css/main.87d41d5a.css.map",
+    "main.d2d88d25.js.map": "/bmmlatam/static/js/main.d2d88d25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87d41d5a.css",
+    "static/js/main.d2d88d25.js"
+  ]
+}
