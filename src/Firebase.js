@@ -3,14 +3,13 @@ import 'firebase/compat/firestore';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyAU0avmPEcrWxznuIGXJVzqT8l9xlKzm0k",
-    authDomain: "nitesout-website.firebaseapp.com",
-    databaseURL: "https://nitesout-website-default-rtdb.firebaseio.com",
-    projectId: "nitesout-website",
-    storageBucket: "nitesout-website.appspot.com",
-    messagingSenderId: "341238459745",
-    appId: "1:341238459745:web:01322264723ba4c452e920",
-    measurementId: "G-48CLLWEP5F"
+  apiKey: "AIzaSyCnpEvLUUdpUR8_b7hyHx4hnlk_rAgGO4k",
+  authDomain: "bmmlatam2.firebaseapp.com",
+  databaseURL: "https://bmmlatam2-default-rtdb.firebaseio.com",
+  projectId: "bmmlatam2",
+  storageBucket: "bmmlatam2.appspot.com",
+  messagingSenderId: "786602309812",
+  appId: "1:786602309812:web:2dd69be36e6fc07be63fe1"
 });
 
 const db = app.firestore();
