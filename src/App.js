@@ -121,7 +121,7 @@ const Home = () => {
         event.preventDefault();
 
         try{
-            db.collection("mailing-list").add({
+            db.collection("waitlist").add({
                 email: userEmail.current.value
             });
         } catch {
