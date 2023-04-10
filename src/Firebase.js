@@ -1,21 +1,17 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCnpEvLUUdpUR8_b7hyHx4hnlk_rAgGO4k",
-  authDomain: "bmmlatam2.firebaseapp.com",
-  databaseURL: "https://bmmlatam2-default-rtdb.firebaseio.com",
-  projectId: "bmmlatam2",
-  storageBucket: "bmmlatam2.appspot.com",
-  messagingSenderId: "786602309812",
-  appId: "1:786602309812:web:2dd69be36e6fc07be63fe1"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const app = firebase.initializeApp({
+    apiKey: "AIzaSyAU0avmPEcrWxznuIGXJVzqT8l9xlKzm0k",
+    authDomain: "nitesout-website.firebaseapp.com",
+    databaseURL: "https://nitesout-website-default-rtdb.firebaseio.com",
+    projectId: "nitesout-website",
+    storageBucket: "nitesout-website.appspot.com",
+    messagingSenderId: "341238459745",
+    appId: "1:341238459745:web:01322264723ba4c452e920",
+    measurementId: "G-48CLLWEP5F"
+});
 
 const db = app.firestore();
 
