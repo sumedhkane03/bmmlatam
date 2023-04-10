@@ -124,6 +124,7 @@ const Home = () => {
             db.collection("waitlist").add({
                 email: userEmail.current.value
             });
+            console.log("dne");
         } catch {
             console.log("post error");
         }
