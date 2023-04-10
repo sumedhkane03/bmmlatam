@@ -16,7 +16,7 @@ import Navbar from './components/Navbar'
 import Alert from './components/Alert'
 
 // back-end import, Firebase, supports waitlist
-{/*import { db } from './Firebase';*/}
+import { db } from './Firebase';
 
 // AOS animation library import, animation on scroll
 import Aos from 'aos'
