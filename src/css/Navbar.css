@@ -33,6 +33,8 @@
     align-items: center;
     height: 100%;
     justify-content: space-between;
+    margin-left: 0px;
+    margin-right: -180px;
     
 }
 
@@ -45,7 +47,6 @@
     width: 30px;
     max-height: 30px;
     position: absolute;
-    left: 25px;
 }
 
 @keyframes dropIn {
@@ -293,4 +294,17 @@
     .load-fast{
         animation-name: mobile-load;
     }
+}
+
+#small_topcorner{
+    width: 4%;
+    height: 4%;
+    
+}
+
+.top_logo{
+    
+    margin-right: -410px;
+    /* margin-top: 50px; */
+    margin-left: -640px;
 }
