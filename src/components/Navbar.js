@@ -165,7 +165,7 @@ const Navbar = () => {
         
         {width > 900 && (
             <div className='nav' id='nav'>
-                <img src={require("../assets/hsslogo.png")} alt="logo" className='logo'/>
+                <Link to='/'><img src={require("../assets/hsslogo.png")} alt="logo" className='logo'/></Link>
                 <div className='nav-buttons'>
                     <Link to='/'><p className='nav-btn'>Home</p></Link> 
                     <Link to='/about'><p className='nav-btn'>About us</p></Link>
