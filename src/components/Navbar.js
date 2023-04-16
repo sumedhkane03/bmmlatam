@@ -182,7 +182,9 @@ const Navbar = () => {
         )}
         {width < 900 && (
             <div className='mobile-nav' id='mobile-nav'>
-                <Link to='/'><img src={require("../assets/hsslogo.png")} alt="logo" className='logo'/></Link>
+                <div className='top_logo' id='top_logo'>
+                <Link to='/'><img src={require("../assets/hsslogo.png")} alt="logo" className='logo' id="small_topcorner"/ ></Link>
+                </div>
                 {/* <img src={require("../assets/hsslogo.png")} alt="logo" className='logo'/> */}
                 <MdMenu className='open-menu' onClick={()=>{setMenu(true)}}/>
             </div>
