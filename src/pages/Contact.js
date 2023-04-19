@@ -31,7 +31,7 @@ const Contact = () => {
             <br></br>
             <div className='team-members'>
                 <Member
-                    picture={<img src={require('../assets/hsslogo.png')}/>}
+                    picture={<img src={require('../assets/contactlogo.png')}/>}
                     name='Bharat Mahotsav Mandal'
                     role='Contact Us'
                     major="Jay Shree Ram"
