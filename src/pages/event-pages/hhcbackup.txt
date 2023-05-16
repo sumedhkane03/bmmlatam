@@ -1,0 +1,63 @@
+<>
+        <div className='bg-2 fade-in bg-animate' id = 'background-3'/>
+        <div className='bg-2 fade-in' id = 'background-2'/>
+        
+        <Navbar/>
+        {/* .loading-bar & .load -> Navbar.css */}
+        <div className='loading-bar load-fast'/> 
+
+        <div className='events-page-container'>
+
+            <h1 className='hhc-page-title'>Hindu Hertiage Camp</h1>
+            {/* description below */}
+            <p className='event-desc'>Sunday, January 8, 2023 3:00-6:00pm</p>      
+
+            <p className='event-desc' id='article'>
+                The first Guadalajara Hindu Heritage Camp (HHC) was held on Sunday, January 8 from 3-6 pm. It was held at José Guadalupe Zuno 
+                Hernández Park in Zapopan, Jalisco, Mexico. There were 70 attendees consisting of families and individuals from around Guadalajara,
+                with 45 adults and 25 kids. This program was conducted at José Guadalupe Zuno Hernández Park in Jalisco. The camp started off with 
+                a few ice breaker games which attendees enjoyed. There were many new faces for everyone, so these games provided a fun way to get 
+                to know each other. These were followed by a lesson on a few powerful shlokas to recite daily. A song (Dharma Ke Liye Jiye), was sung
+                to set the mood and bring positive energy to all. After this, many games were played. Adults played together and kids played in their
+                own group. Some games that the adults enjoyed were Kho-kho, Hanuman (Human chess), and Airplane. Some games that the children
+                enjoyed were Vish Amrut (Poison & Nectar) and Crocodile Tag. The games were followed by an informative yoga session for both, 
+                children and adults. Surya Namaskars (Sun Salutations) were taught with proper forms and many were interested in learning this form
+                of yoga. After practicing yoga, attendees participated in learning various forms of pranayam, or breathing excercises. They learned 
+                a few forms including, Bastrika, Kapal Bhati, Anulom Vilom, and Omkar chanting. The yoga and pranayam was followed by an engaging 
+                discussion for the adults/parents about how to preserve and pass on cultural heritage and teachings to the next generation. A fun 
+                interactive story about Shri Hanuman ji was told to the kids which they enjoyed a lot. To wrap the program up, attendees were taught
+                the meaning of the Prarthana we recite. Everyone repeated the first two, and last stanza of the prarthana and felt inspired. Many expressed
+                their joy and gratitude that such type of event was conducted and that they were looking forward to coming again on a regular basis. Many 
+                parents felt this to be a good place to take their kids while also getting a chance to meet others in a fun and engaging way. There
+                 are 7 karyakartas who are dedicated to starting a sanghatan in Mexico. These karyakartas for planned multiple days over 2 weeks to plan 
+                 out this event. Dinesh ji Gulati, the karyavah, helped with conducting khel sessions and registrations. Chitransh ji Shrivastava, the 
+                 mukhyashikshak, helped with taking khel for kids, as well as videographing the event. Lokesh ji Bhatt helped with registration and photography.
+                  Subramanian (Subbu) ji helped with teaching and explaining shlokas. Devendra ji Rathore helped with taking yoga for kids, as well as vyavastha.
+                   Dharmesh ji Yadav, the seva pramukh, helped with vyavastha as well as taking discussion for adults. Sumit ji Jindal, the sampark pramukh, 
+                   helped with taking stories for the kids, vyavastha, and outreach.
+            </p>
+
+            {/* <div className='event-img-container' id='left'> */}
+                <img src={require('../../assets/gallery/lo6.jpg')} className='event-img notransition'/> 
+            {/* </div> */}
+        </div>
+        
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        
+
+        <Footer/>
+
+        </>
