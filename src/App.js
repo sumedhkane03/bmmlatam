@@ -206,6 +206,15 @@ const Home = () => {
                 <h2 className='landing-sub'>वसुधैव कुटुम्बकम्.</h2>
                 {/* big glowing button */}
                 <p className='landing-waitlist' onClick={()=>{setWaitlist(true)}}>Join Mailing list</p>
+                <div className='subhashitam-box'>
+                    <h4 className='subhashitam'>
+                        न ही कश्चित् विजानाति 
+                        किं कस्य श्वो भविष्यति।
+                        अतः श्वः करणीयानि 
+                        कुर्यादद्यैव बुद्धिमान्॥
+                        
+                    </h4>
+                </div>
             </div>
 
             <div className='bar-node' id='bar-node-1'>
