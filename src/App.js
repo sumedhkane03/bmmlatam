@@ -215,6 +215,12 @@ const Home = () => {
                         
                     </h4>
                 </div>
+
+                <div className='meaning-box'>
+                    <h4 className='subhashitam-meaning'>
+                    No one knows what is going to happen tomorrow. <br></br>So doing all of tomorrow's task today is a signature of wise.
+                    </h4>
+                </div>
             </div>
 
             <div className='bar-node' id='bar-node-1'>

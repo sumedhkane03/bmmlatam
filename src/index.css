@@ -39,7 +39,7 @@ a{
 }
 
 .subhashitam-box{
-    margin-top: 10px;
+    margin-top: -10px;
     padding: 10px;
     /* border: 1px solid #e0e0e0; */
     /* wrap text */
@@ -54,6 +54,24 @@ a{
     font-weight: 400;
     line-height: 1.5;
     color: #001e3c;
+}
+
+.subhashitam-meaning{
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.meaning-box{
+    margin-top: -35px;
+    padding: 20px;
+    /* border-top: 1px solid #000000; */
+    /* wrap text */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    /* limit width */
+    max-width: 300px;
 }
 
 
