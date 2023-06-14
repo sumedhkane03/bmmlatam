@@ -175,6 +175,7 @@ const Navbar = () => {
                     <Link to='/events'><p className='nav-btn'>Events</p></Link>
                     <Link to='/gallery'><p className='nav-btn'>Gallery</p></Link>
                     <Link to='/contact'><p className='nav-btn'>Contact us</p></Link>
+                    <Link to='/competitions'><p className='nav-btn'>Competitions</p></Link>
                     {/*<Link to='/daytime-dager' target="_blank"><p className='nav-btn'>Darty</p></Link>*/}
                     {/* <p className='nav-btn' onClick={comingSoonPop}>Shop</p> */}
                     {/*<p className='nav-highlight' onClick={()=>{setWaitlist(true)}}>Join Waitlist</p>*/}
@@ -195,4 +196,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

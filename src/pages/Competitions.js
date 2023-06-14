@@ -27,16 +27,9 @@ const Competitions = () => {
 
         <div className='events-page-container'>
 
-            <h1 className='events-page-title' id='team-page-title'>About us</h1>
+            <h1 className='events-page-title' id='team-page-title'>Competitions</h1>
             <p className='alt-subtitle'>
-            Our mission is to organize a diverse and vibrant Hindu American society that can collectively address its challenges, and contribute to the welfare of the world.
-            Hindu Swayamsevak Sangh USA  (HSS or HSS USA) is a 501(c)(3), voluntary, non-profit, social, educational, and cultural organization. Sangh, as the
-             organization is popularly known, aims to coordinate the Hindu American community to practice, preserve, and advance ideals and values of Hindu Dharma.
-              HSS conducts regular values-based education programs for children, youth and adults through more than 220 branches nationwide. We also organize service 
-              activities and community outreach projects.Through our regular educational programs based on Dharma, we instill and promote discipline, self-confidence, 
-              teamwork, and the spirit of selfless service. Through service activities and outreach projects, we foster a sense of civic duty, responsibility, and volunteerism. 
-              HSS USA endeavors to instill pride in Hindu heritage among its members and to enhance appreciation of Hindus around the world, their traditions, and civilization by 
-              the broader community in the United States.
+            Coming Soon!
             </p>
             {/*<h1 className='events-page-title' id='team-page-title'>Our Team</h1>
             <p className='alt-subtitle'></p>
