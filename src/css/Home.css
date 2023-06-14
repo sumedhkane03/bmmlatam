@@ -193,11 +193,12 @@ html{
 
 .landing-sub{
     margin-top: -3vh;
-    font-size: 0.9vw;
-    font-weight: 00;
-    opacity: 0;
+    font-size: 1.75vw;
+    font-weight: 600;
+    opacity: 1;
     max-width: 40vw;
     color: black;
+    
 
     animation-name: fadeInUp-alt-subtitle;
     animation-duration: 0.8s;
