@@ -209,7 +209,7 @@ const Home = () => {
                 <div className='subhashitam-box'>
                     <h4 className='subhashitam'>
                         न ही कश्चित् विजानाति 
-                        किं कस्य श्वो भविष्यति।
+                        किं कस्य श्वो भविष्यति। <br></br>
                         अतः श्वः करणीयानि 
                         कुर्यादद्यैव बुद्धिमान्॥
                         
