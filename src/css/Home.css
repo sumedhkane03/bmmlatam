@@ -10,6 +10,7 @@ html{
     left: 0;
     z-index: 3;
     background-image: url("../assets/NitesOut\ Gradient\ BG.jpg");
+    /* background-color: --webkit-linear-gradient(30deg, #ffbd5b, #f98c17); */
     pointer-events: none;
 }
 
@@ -24,6 +25,7 @@ html{
 
 #background-2{
     background-image: url("../assets/NitesOut\ Gradient\ BG-rainbow.jpg");
+    /* background-color: --webkit-linear-gradient(30deg, #ffbd5b, #f98c17); */
 }
 
 #background-3{

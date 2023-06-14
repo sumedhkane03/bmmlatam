@@ -177,7 +177,7 @@ const Home = () => {
             <div className='dark-bg dark-bg-enter' onClick={()=>{popUpLeave("wl")}} id="blurry-bg"/>
             <div className='popup-container popup-container-enter' id="cool-popup">
                 <div className='popup nitesout-card'>
-                    <p className='popup-text'>Join our mailing list!<br/>Email updates of events and other items.</p>
+                    <p className='popup-text'>Join our mailing list!<br/>Email updates of events, competitions and other items.</p>
                     <form id='nitesout-waitlist' className='popup-inputs' onSubmit={saveAnswer}>
                         <input ref={userEmail} type='email' placeholder='Your Email Address'/>
                         <button type='submit'>Join</button> 
@@ -203,9 +203,9 @@ const Home = () => {
             <div className='landing-content'>
                 <img src={require("./assets/hsslogo.png")} alt="logo" className='landing-logo'/>
                 <h1 className='landing-title'>BHARAT MAHOTSAV<br/>MANDAL</h1>
-                <h2 className='landing-sub'>We achieve by our own efforts.</h2>
+                <h2 className='landing-sub'>वसुधैव कुटुम्बकम्.</h2>
                 {/* big glowing button */}
-                <p className='landing-waitlist' onClick={()=>{setWaitlist(true)}}>Join Waitlist</p>
+                <p className='landing-waitlist' onClick={()=>{setWaitlist(true)}}>Join Mailing list</p>
             </div>
 
             <div className='bar-node' id='bar-node-1'>

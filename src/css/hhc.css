@@ -29,9 +29,19 @@
     opacity: 0;
 
     animation-name: fadeInUp;
-    animation-duration: 0.8s;
+    animation-duration: 0s;
     animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
+
+#hi{
+    font-size: 12pt;
+    font-weight: 300;
+
+    color: gray;
+}
+
+
 
 .event-desc{
 

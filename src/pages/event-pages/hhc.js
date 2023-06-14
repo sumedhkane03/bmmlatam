@@ -25,8 +25,13 @@ const HHC = () => {
 
         <div className='main'>
             <h1 className='hhc-page-title'>TITLE</h1>
+        <p className='hhc-page-title' id='hi'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla facilisi. Donec euismod, nunc id aliquam ultricies,
+            nunc nisl ultricies nunc, vitae aliquam nunc nisl eu nunc.
+        </p>
         </div>
-        
+
         <br></br>
         <br></br>
         <br></br>
