@@ -31,6 +31,28 @@ const Competitions = () => {
             <p className='alt-subtitle'>
             Coming Soon!
             </p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             {/*<h1 className='events-page-title' id='team-page-title'>Our Team</h1>
             <p className='alt-subtitle'></p>
             <h1 className='events-page-title' id='team-page-title'>Our Advisors</h1>
