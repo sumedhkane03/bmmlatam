@@ -207,6 +207,9 @@ const Home = () => {
                 {/* big glowing button */}
                 <p className='landing-waitlist' onClick={()=>{setWaitlist(true)}}>Join Mailing list</p>
                 <div className='subhashitam-box'>
+                    <h3 className='subhashitam-of'>
+                        Subhashitam of the Week
+                    </h3>
                     <h4 className='subhashitam'>
                         न ही कश्चित् विजानाति 
                         किं कस्य श्वो भविष्यति। <br></br>
