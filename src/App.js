@@ -203,7 +203,7 @@ const Home = () => {
             <div className='landing-content'>
                 <img src={require("./assets/hsslogo.png")} alt="logo" className='landing-logo'/>
                 <h1 className='landing-title'>BHARAT MAHOTSAV<br/>MANDAL</h1>
-                <h2 className='landing-sub'>वसुधैव कुटुम्बकम्.</h2>
+                <h2 className='landing-sub'>वसुधैव कुटुम्बकम्</h2>
                 {/* big glowing button */}
                 <p className='landing-waitlist' onClick={()=>{setWaitlist(true)}}>Join Mailing list</p>
                 <div className='subhashitam-box'>
