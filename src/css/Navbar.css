@@ -35,6 +35,8 @@
     justify-content: space-between;
     margin-left: 0px;
     margin-right: -180px;
+
+    /* border: 2px solid white; */
     
 }
 
@@ -299,14 +301,39 @@
 #small_topcorner{
     /* width: 4%;
     height: 4%; */
-    width: 20%;
-    height: 20%;
+    /* width: 11%;
+    height: 11%; */
+
+    width: 85%;
+    height: 85%;
+    
     
 }
 
 .top_logo{
-    
-    margin-right: -410px;
+    /* margin-right: 200px; */
     /* margin-top: 50px; */
-    margin-left: -640px;
+    /* margin-left: -640px; */
+    margin-left: -575px;
+    margin-right: 350px;
+
 }
+
+.toplogo{
+    /* border: 2px solid white; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    left: 500px;
+}
+
+
+
+
+
+
