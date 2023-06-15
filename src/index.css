@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+html{
+    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+h2, p, h3, h4, h5, h6, a, div{
+    line-height: 100%;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.subhashitam-box{
+    margin-top: -10px;
+    padding: 10px;
+    /* border: 1px solid #e0e0e0; */
+    /* wrap text */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    /* limit width */
+    max-width: 400px;
+}
+
+.subhashitam{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #001e3c;
+}
+
+.subhashitam-meaning{
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.meaning-box{
+    margin-top: -35px;
+    padding: 20px;
+    /* border-top: 1px solid #000000; */
+    /* wrap text */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    /* limit width */
+    max-width: 300px;
+}
+
+
