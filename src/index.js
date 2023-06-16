@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import About from './pages/About';
 import Events from './pages/Events';
 import Gallery from './pages/Gallery';
@@ -22,7 +23,8 @@ import Login from './pages/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
+  // <HashRouter>
+  <BrowserRouter>
     <Routes>
         <Route path = "*" element = {<App/>}/>
         <Route path = "/about" element = {<About/>}/>
@@ -40,5 +42,6 @@ root.render(
         <Route path = "/login" element = {<Login/>}/>
 
     </Routes>
-  </HashRouter>
+    </BrowserRouter>
+  // {/* </HashRouter> */}
 );
