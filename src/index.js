@@ -16,6 +16,10 @@ import Ramayan from './pages/event-pages/ramayan';
 import Sundarkand from './pages/event-pages/sundarkand'
 
 
+import Signup from './pages/SignUp';
+import Login from './pages/Login';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HashRouter>
@@ -32,6 +36,8 @@ root.render(
         <Route path = "/ak-ramayan" element = {<Ramayan/>}/>
         <Route path = "/sundarkand" element = {<Sundarkand/>}/>
         
+        <Route path = "/signup" element = {<Signup/>}/>
+        <Route path = "/login" element = {<Login/>}/>
 
     </Routes>
   </HashRouter>

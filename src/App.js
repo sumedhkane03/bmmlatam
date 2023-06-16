@@ -25,6 +25,9 @@ import "aos/dist/aos.css";
 // Link import, used for routing links to other pages on the website
 import { Link } from 'react-router-dom'
 
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from './Firebase';
+
 const Home = () => {
 
     // variable that keeps track of the user's window size width and height
@@ -53,6 +56,25 @@ const Home = () => {
 
         //  Removing event listener when component unmounts
         return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
+
+    useEffect(()=>{
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+              // ...
+              console.log("logged in, uid: ", uid)
+              console.log("email: ",user.email)
+              console.log("password", user.displayName)
+            } else {
+              // User is signed out
+              // ...
+              console.log("user is logged out")
+            }
+          });
+         
     }, []);
 
     // function to find if any part of an element is in the viewport, returns boolean
