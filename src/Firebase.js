@@ -17,4 +17,10 @@ const app = firebase.initializeApp({
 const db = app.firestore();
 export const auth = getAuth(app);
 export const analytics = getAnalytics(app);
+
+
+
+
+export const signInWithGoogle = () => auth.signInWithPopup();
+
 export {app, db};
