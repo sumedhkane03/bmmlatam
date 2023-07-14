@@ -12,6 +12,11 @@ import {signInWithPopup} from "firebase/auth";
 const provider = new GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
+const handleLogout = () => {
+    auth.signOut();
+}
+
+
 const GoogleSI = () =>{
 signInWithPopup(auth, provider)
   .then((result) => {
@@ -144,6 +149,9 @@ const Login = () => {
                             </NavLink>
                         </p>
 
+                        <div>
+                            <button onClick={handleLogout}>Log out</button>
+                        </div>
 
                         </div>
                                                    
