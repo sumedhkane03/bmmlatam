@@ -14,7 +14,7 @@ provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 const handleLogout = () => {
     auth.signOut();
-    useNavigate("/home");
+    // useNavigate("/home");
 
 }
 
