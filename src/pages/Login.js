@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {  GoogleAuthProvider, ProviderId, signInWithEmailAndPassword, signInWithEmailLink   } from 'firebase/auth';
+import {  GoogleAuthProvider, ProviderId, reload, signInWithEmailAndPassword, signInWithEmailLink   } from 'firebase/auth';
 import { auth, signInWithGoogle } from '../Firebase';
 import { NavLink, useNavigate } from 'react-router-dom';
 
@@ -14,6 +14,8 @@ provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 const handleLogout = () => {
     auth.signOut();
+    useNavigate("/home");
+
 }
 
 
