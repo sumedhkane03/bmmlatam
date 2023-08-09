@@ -6,6 +6,8 @@ import { auth } from '../Firebase'
 import NavBar from '../components/Navbar';
 import background from '../assets/NitesOut Gradient BG-rainbow.jpg';
 
+import { db } from '../Firebase';
+
 import '../css/SignUp.css';
  
 const Signup = () => {
@@ -23,8 +25,8 @@ const Signup = () => {
             const user = userCredential.user;
             console.log(user);
             // ###########################
-            firestore()
-    .collection("mail")
+            
+    db.collection("mail")
     .add({
       to: user.email,
       message: {
