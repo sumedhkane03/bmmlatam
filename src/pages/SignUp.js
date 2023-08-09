@@ -22,6 +22,27 @@ const Signup = () => {
             // Signed in
             const user = userCredential.user;
             console.log(user);
+            // ###########################
+            firestore()
+    .collection("mail")
+    .add({
+      to: user.email,
+      message: {
+        subject: "Welcome!",
+        html: `
+          Namaste,
+
+          Thank you for signing up for our mailing list.
+
+          Glad to have you as a part of the community.
+
+          OM 🙏, 
+          
+          BMM LATAM
+        `,
+      },
+    });
+            // ###########################
             navigate("/login")
             // ...
         })
