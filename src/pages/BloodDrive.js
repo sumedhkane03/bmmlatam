@@ -23,12 +23,13 @@ import Aos from 'aos'
 import "aos/dist/aos.css";
 
 // Link import, used for routing links to other pages on the website
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../Firebase';
 
 const BloodDrive = () => {
+    const navigate = useNavigate();
 
     // variable that keeps track of the user's window size width and height
     const [width, setWidth]   = useState(window.innerWidth);
@@ -157,7 +158,7 @@ const BloodDrive = () => {
             console.log("post error");
         }
 
-        popUpLeave("wl");
+        navigate("/")
         setTimeout(()=>{setInvite(true)}, 305);
     };
 
