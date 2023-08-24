@@ -96,11 +96,14 @@ const Navbar = () => {
                 <div className='menu-container menu-enter' id='cool-menu'>
                     <MdClose className='close-menu' onClick={menuLeave}/>
                     <Link to='/'><p className='menu-btn'>Home</p></Link>
+                    <Link to='/blood-drive'><p className='menu-btn red-text-mobile'>Blood Drive</p></Link>
                     <Link to='/events'><p className='menu-btn'>Events</p></Link>
                     <Link to='/team'><p className='menu-btn'>About us</p></Link>
                     <Link to='/gallery'><p className='menu-btn'>Gallery</p></Link>
                     <Link to='/contact'><p className='menu-btn'>Contact us</p></Link>
                     <Link to='/competitions'><p className='menu-btn'>Competitions</p></Link>
+
+                    
                     {/* <Link to='/shop'><p className='menu-btn'>Shop</p></Link> */}
                     {/* <Link to='/daytime-dager' target="_blank"><p className='menu-btn'>Darty</p></Link> */}
 
@@ -173,9 +176,13 @@ const Navbar = () => {
                     <Link to='/'><p className='nav-btn'>Home</p></Link> 
                     <Link to='/about'><p className='nav-btn'>About us</p></Link>
                     <Link to='/events'><p className='nav-btn'>Events</p></Link>
+
+                    <Link to='/blood-drive'><p className='menu-btn red-text'>Blood Drive</p></Link>
+
                     <Link to='/gallery'><p className='nav-btn'>Gallery</p></Link>
                     <Link to='/contact'><p className='nav-btn'>Contact us</p></Link>
                     <Link to='/competitions'><p className='nav-btn'>Competitions</p></Link>
+                    
                     {/* <Link to='/signup'><p className='nav-btn'>SIGN UP!</p></Link> */}
                     {/*<Link to='/daytime-dager' target="_blank"><p className='nav-btn'>Darty</p></Link>*/}
                     {/* <p className='nav-btn' onClick={comingSoonPop}>Shop</p> */}

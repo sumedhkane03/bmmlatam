@@ -34,7 +34,7 @@
     height: 100%;
     justify-content: space-between;
     margin-left: 0px;
-    margin-right: -180px;
+    margin-right: -245px; /* default -180 */
 
     /* border: 2px solid white; */
     
