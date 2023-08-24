@@ -20,6 +20,8 @@ import Sundarkand from './pages/event-pages/sundarkand'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
 
+import BloodDrive from './pages/BloodDrive';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -40,6 +42,8 @@ root.render(
         
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/login" element = {<Login/>}/>
+
+        <Route path = "/blood-drive" element = {<BloodDrive/>}/>
 
     </Routes>
     </BrowserRouter>
