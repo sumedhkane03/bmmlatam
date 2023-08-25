@@ -206,7 +206,7 @@ const BloodDrive = () => {
             <div className='dark-bg dark-bg-enter'  id="blurry-bg"/>
             <div className='popup-container popup-container-enter' id="cool-popup">
                 <div className='popup nitesout-card red'>
-                    <p className='popup-text'>¡Salva vidas y dona sangre!<br/>Lugar, Hora, Fecha</p>
+                    <p className='popup-text'>¡Salva vidas y dona sangre!<br/><b>9:00 AM, 16 Septiembre 2023, Francis Bacon School Primaria</b></p>
                     <form id='nitesout-waitlist' className='popup-inputs vert' onSubmit={saveAnswer}>
                         <input ref={userEmail} className='inputForm' type='email' placeholder='Su dirección de correo electrónico'/>
                         <input ref={firstName} className='inputForm' type='string' placeholder='Su nombre primero'/>
