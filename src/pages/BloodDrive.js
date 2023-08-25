@@ -192,7 +192,7 @@ const BloodDrive = () => {
 
   return (
     <html>
-    
+    <title>Blood Donation Drive</title>
     {/* background on landing page */}
     <div className='bg fade-in' id = 'background'/>
 
