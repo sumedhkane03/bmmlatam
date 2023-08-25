@@ -32,7 +32,7 @@ const Events = () => {
             <div className='events-page-content'>
                 <p className='timing-title'>Upcoming Events</p>
 
-                <a href="/#/sundarkand" target="_blank">
+                <a href="/sundarkand" >
                 <div className='highlight-event'>
                     <div className='highlight-event-tags'>
                         <p className='cool-tag'>Every Saturday</p>
