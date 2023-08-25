@@ -190,6 +190,9 @@ const BloodDrive = () => {
         }
     }
 
+    var userLang = navigator.language || navigator.userLanguage; 
+    console.log("The language is: " + userLang);
+
   return (
     <html>
     <title>Blood Donation Drive</title>
@@ -201,8 +204,30 @@ const BloodDrive = () => {
     <div className='bg-2 fade-in' id = 'background-2'/>
 
     {/* MAILING LIST POPUP */}
-    
+    {/* FORM FOR ENGLISH SPEAKERS */}
+    {(userLang === 'en-US') && 
         <>
+        
+            <div className='dark-bg dark-bg-enter'  id="blurry-bg"/>
+            <div className='popup-container popup-container-enter' id="cool-popup">
+                <div className='popup nitesout-card red'>
+                    <p className='popup-text'>Save Lives, Donate Blood!<br/><b>9:00 AM, 16 September 2023, Francis Bacon School Primaria</b></p>
+                    <form id='nitesout-waitlist' className='popup-inputs vert' onSubmit={saveAnswer}>
+                        <input ref={userEmail} className='inputForm' type='email' placeholder='Email Address'/>
+                        <input ref={firstName} className='inputForm' type='string' placeholder='First Name'/>
+                        <input ref={lastName} className='inputForm' type='string' placeholder='Last Name'/>
+                        <input ref={phNumber} className='inputForm' type='string' placeholder='Phone Number (+52 33 3333 3333)'/>
+                        <button type='submit'> Submit </button>
+                    </form>
+                </div>
+            </div>  
+        </>
+
+    }
+
+    {(userLang !== 'en-US') && 
+        <>
+        
             <div className='dark-bg dark-bg-enter'  id="blurry-bg"/>
             <div className='popup-container popup-container-enter' id="cool-popup">
                 <div className='popup nitesout-card red'>
@@ -217,6 +242,8 @@ const BloodDrive = () => {
                 </div>
             </div>  
         </>
+
+    }
 
     {/* holds all different sections on the homepage */}
 
