@@ -129,7 +129,7 @@ const Navbar = () => {
                     <div className='popup-container popup-container-enter' id="cool-popup-2">
                         <div className='popup gold-card'>
                             <p className='invite-thanks'>You're Invited!</p>
-                            <img src={require("../assets/events/NasheDi-txt.png")} alt="litesout" className='invite-img'/>
+                            {/* <img src={require("../assets/events/NasheDi-txt.png")} alt="litesout" className='invite-img'/> */}
                             <a href = "https://www.eventbrite.com/e/nashe-di-night-tickets-565509593417" className='get-tickets' target="_blank">
                                 Get Tickets
                             </a>

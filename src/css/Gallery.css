@@ -124,7 +124,7 @@
     width: calc(66.666% - 20px);
 }
 
-#gal-nav-noto{
+/* #gal-nav-noto{
     background-image: url('../assets/events/frightnitenoto.jpg');
 }
 
@@ -134,7 +134,7 @@
 
 #gal-nav-litesout{
     background-image: url('../assets/events/LitesOut-poster.png');
-}
+} */
 
 @media screen and (max-width: 900px){
     .gal-nav-btn{
