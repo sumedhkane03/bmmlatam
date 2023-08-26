@@ -213,10 +213,10 @@ const BloodDrive = () => {
                 <div className='popup nitesout-card red'>
                     <p className='popup-text'>Save Lives, Donate Blood!<br/><b>9:00 AM, 16 September 2023, Francis Bacon School Primaria</b></p>
                     <form id='nitesout-waitlist' className='popup-inputs vert' onSubmit={saveAnswer}>
-                        <input ref={userEmail} className='inputForm' type='email' placeholder='Email Address'/>
-                        <input ref={firstName} className='inputForm' type='string' placeholder='First Name'/>
-                        <input ref={lastName} className='inputForm' type='string' placeholder='Last Name'/>
-                        <input ref={phNumber} className='inputForm' type='string' placeholder='Phone Number (+52 33 3333 3333)'/>
+                        <input ref={firstName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='First Name'/>
+                        <input ref={lastName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Last Name'/>
+                        <input ref={userEmail} className='inputForm' type='email' required minLength="2" maxLength="30" placeholder='Email Address'/>
+                        <input ref={phNumber} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Phone Number (+52 33 3333 3333)'/>
                         <button type='submit'> Submit </button>
                     </form>
                 </div>
@@ -233,10 +233,10 @@ const BloodDrive = () => {
                 <div className='popup nitesout-card red'>
                     <p className='popup-text'>¡Salva vidas y dona sangre!<br/><b>9:00 AM, 16 Septiembre 2023, Francis Bacon School Primaria</b></p>
                     <form id='nitesout-waitlist' className='popup-inputs vert' onSubmit={saveAnswer}>
-                        <input ref={userEmail} className='inputForm' type='email' placeholder='Su dirección de correo electrónico'/>
-                        <input ref={firstName} className='inputForm' type='string' placeholder='Su nombre primero'/>
-                        <input ref={lastName} className='inputForm' type='string' placeholder='Su nombre familia'/>
-                        <input ref={phNumber} className='inputForm' type='string' placeholder='Su numero de telefono (+52 33 3333 3333)'/>
+                        <input ref={firstName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Su nombre primero'/>
+                        <input ref={lastName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Su nombre familia'/>
+                        <input ref={userEmail} className='inputForm' type='email' required minLength="2" maxLength="30" placeholder='Su dirección de correo electrónico'/>
+                        <input ref={phNumber} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Su numero de telefono (+52 33 3333 3333)'/>
                         <button type='submit'> Entregar </button> 
                     </form>
                 </div>
