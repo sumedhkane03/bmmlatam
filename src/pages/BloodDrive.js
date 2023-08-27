@@ -137,6 +137,7 @@ const BloodDrive = () => {
     const firstName = useRef();
     const lastName = useRef();
     const phNumber = useRef();
+    const countryCode = useRef();
 
     // variables that hold the visibility state of the waitlist and invite popup
     const [invite, setInvite] = useState(false); // ex. setInvite(false) will make it dissapear
@@ -216,6 +217,7 @@ const BloodDrive = () => {
                         <input ref={firstName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='First Name'/>
                         <input ref={lastName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Last Name'/>
                         <input ref={userEmail} className='inputForm' type='email' required minLength="2" maxLength="30" placeholder='Email Address'/>
+                        <input ref={countryCode} className='inputForm' type='number' minLength={1} maxLength={3} placeholder='Su código de país'/>
                         <input ref={phNumber} className='inputForm' type='tel' pattern='[0-9]{2}-[0-9]{4}-[0-9]{4}' required minLength="2" maxLength="30" placeholder='Su numero de telefono (33-3333-3333)'/>
                         <button type='submit'> Submit </button>
                     </form>
@@ -236,7 +238,8 @@ const BloodDrive = () => {
                         <input ref={firstName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Su nombre primero'/>
                         <input ref={lastName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Su nombre familia'/>
                         <input ref={userEmail} className='inputForm' type='email' required minLength="2" maxLength="30" placeholder='Su dirección de correo electrónico'/>
-                        <input ref={phNumber} className='inputForm' type='tel' pattern='[0-9]{2}-[0-9]{4}-[0-9]{4}' required minLength="2" maxLength="30" placeholder='Su numero de telefono (33-3333-3333)'/>
+                        <input ref={countryCode} className='inputForm' type='number' minLength={1} maxLength={3} placeholder='Su código de país'/>
+                        <input ref={phNumber} className='inputForm' type='tel' /*pattern='[0-9]{2}-[0-9]{4}-[0-9]{4}'*/ required minLength="2" maxLength="30" placeholder='Su numero de telefono (33-3333-3333)'/>
                         <button type='submit'> Entregar </button> 
                     </form>
                 </div>

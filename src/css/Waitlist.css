@@ -130,8 +130,10 @@
 
 .popup input{
     font-family: 'Inter', sans-serif;
-    height: 100px;
-    width: 700px;
+    /* height: 100px;
+    width: 700px; */
+    height: 50px;
+    width: 100%;
     padding: 0 20px;
     border-radius: 8px 0 0 8px;
     border: none;
