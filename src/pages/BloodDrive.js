@@ -217,7 +217,7 @@ const BloodDrive = () => {
                         <input ref={firstName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='First Name'/>
                         <input ref={lastName} className='inputForm' type='string' required minLength="2" maxLength="30" placeholder='Last Name'/>
                         <input ref={userEmail} className='inputForm' type='email' required minLength="2" maxLength="30" placeholder='Email Address'/>
-                        <input ref={countryCode} className='inputForm' type='number' minLength={1} maxLength={3} placeholder='Country Code (+52)'/>
+                        <input ref={countryCode} className='inputForm' type='number' minLength={1} maxLength={4} placeholder='Country Code (+52)'/>
                         <input ref={phNumber} className='inputForm' type='tel' pattern='[0-9]{2}-[0-9]{4}-[0-9]{4}' required minLength="2" maxLength="30" placeholder='Su numero de telefono (33-3333-3333)'/>
                         <button type='submit'> Submit </button>
                     </form>
