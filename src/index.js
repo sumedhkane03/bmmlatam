@@ -22,6 +22,8 @@ import Login from './pages/Login';
 
 import BloodDrive from './pages/BloodDrive';
 
+import Report from './pages/Report'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -44,6 +46,8 @@ root.render(
         <Route path = "/login" element = {<Login/>}/>
 
         <Route path = "/blood-drive" element = {<BloodDrive/>}/>
+
+        <Route path = '/report' element = {<Report/>}/>
 
     </Routes>
     </BrowserRouter>
