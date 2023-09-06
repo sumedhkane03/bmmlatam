@@ -7,13 +7,13 @@ import {getAnalytics} from 'firebase/analytics'
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const app = firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyCnpEvLUUdpUR8_b7hyHx4hnlk_rAgGO4k",
+  authDomain: "bmmlatam2.firebaseapp.com",
+  databaseURL: "https://bmmlatam2-default-rtdb.firebaseio.com",
+  projectId: "bmmlatam2",
+  storageBucket: "bmmlatam2.appspot.com",
+  messagingSenderId: "786602309812",
+  appId: "1:786602309812:web:2dd69be36e6fc07be63fe1"
 });
 
 const db = app.firestore();
