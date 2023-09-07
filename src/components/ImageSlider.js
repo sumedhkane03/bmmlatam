@@ -54,6 +54,15 @@ const ImageSlider = ({slides}) => {
         setCurrentIndex(newIndex);
     };
 
+    const caption = {
+        position: "absolute",
+        left: "45%",
+        fontSize: "35px",
+        textAlign: "center",
+        id: `${slides[currentIndex].title}`,
+        
+    };
+
     return (
     <>
     <div style={sliderStyles}>
@@ -62,8 +71,12 @@ const ImageSlider = ({slides}) => {
         <div style={rightArrow} onClick={goToNext}> → </div>
 
         <div style={slideStyles}> </div>
+
+        <div style={caption}> .</div>
     </div>
     
+    
+
     </>
     )
 };
