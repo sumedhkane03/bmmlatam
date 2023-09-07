@@ -7,9 +7,9 @@ import '../css/Footer.css'
 import '../css/Team.css'
 import '../css/Navbar.css'
 import Navbar from '../components/Navbar';
-import { FaIndent } from 'react-icons/fa';
 
 
+import ImageSlider from '../components/ImageSlider';
 
 const Team = () => {
 
@@ -20,7 +20,18 @@ const Team = () => {
     const [wlActive, setWlActive] = useState(false);
 
 
-    
+    const slides = [
+      {url: require("../assets/gallery/lo1.jpg"), title: "first"},
+      {url: require("../assets/gallery/lo2.jpg"), title: "second"},
+      {url: require("../assets/gallery/lo3.jpg"), title: "third"},
+      {url: require("../assets/gallery/lo4.jpg"), title: "fourth"},
+    ];
+
+    const containerStyles = {
+      width: "750px",
+      height: "420px",
+      margin: "0 auto"
+    };
 
 
   return (
@@ -31,8 +42,12 @@ const Team = () => {
         <Navbar/>
         {/* .loading-bar & .load -> Navbar.css */}
         <div className='loading-bar load-fast'/> 
-
+        
         <div className='events-page-container'>
+        <h1 className='events-page-title' id='team-page-title'>Image Slideshow</h1>
+        </div>
+
+        {/* <div className='events-page-container'>
 
             <h1 className='events-page-title' id='team-page-title'>Image Slideshow</h1>
 
@@ -85,6 +100,14 @@ const Team = () => {
                 </p>
             </div>
         
+        </div> */}
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        <div style={containerStyles}>
+        <ImageSlider slides={slides}/>
         </div>
 
         <Footer/>
