@@ -57,20 +57,20 @@ const Events = () => {
 
                 <div className='events-grid'>
                     <Event
-                        thumbnailID="hhc_thumb"
-                        title="Hindu Heritage Camp"
-                        date="Jan. 8, 2023"
-                        location="Guadalajara, MX"
-                        pop="70"
-                        link={"/hhc"}
-                    />
-                    <Event
                         thumbnailID="ak_ramayan"
                         title="Akhand Ramayan Path"
                         date="Mar. 25, 2023"
                         location="Guadalajara, MX"
                         pop="150"
                         link={"/ak-ramayan"}
+                    />
+                    <Event
+                        thumbnailID="hhc_thumb"
+                        title="Hindu Heritage Camp"
+                        date="Jan. 8, 2023"
+                        location="Guadalajara, MX"
+                        pop="70"
+                        link={"/hhc"}
                     />
                     <Event
                         thumbnailID="darshana"
