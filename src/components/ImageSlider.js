@@ -1,5 +1,5 @@
 import { AuthErrorCodes } from "firebase/auth";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ImageSlider = ({slides}) => {
     const [currentIndex,setCurrentIndex] = useState(0);
@@ -41,27 +41,24 @@ const ImageSlider = ({slides}) => {
         cursor: "pointer",
     };
     
+    const caption = useRef('HELLOOOOO');
 
     const goToPrev = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
+        caption.current = slides[newIndex].title;
+
     };
 
     const goToNext = () => {
         const isLastSlide = currentIndex === (slides.length - 1);
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
+        caption.current = slides[newIndex].title;
     };
 
-    const caption = {
-        position: "absolute",
-        left: "45%",
-        fontSize: "35px",
-        textAlign: "center",
-        id: `${slides[currentIndex].title}`,
-        
-    };
+    
 
     return (
     <>
@@ -70,9 +67,9 @@ const ImageSlider = ({slides}) => {
         <div style={leftArrow} onClick={goToPrev}> ← </div>
         <div style={rightArrow} onClick={goToNext}> → </div>
 
-        <div style={slideStyles}> </div>
+        <div style={slideStyles}></div>
 
-        <div style={caption}> .</div>
+        
     </div>
     
     

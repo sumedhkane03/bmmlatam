@@ -50,7 +50,7 @@ const Events = () => {
                         date="Jan. 8, 2023"
                         location="Guadalajara, MX"
                         pop="70"
-                        link={"/#/hhc"}
+                        link={"/hhc"}
                     />
                     <Event
                         thumbnailID="ak_ramayan"
@@ -58,7 +58,7 @@ const Events = () => {
                         date="Mar. 25, 2023"
                         location="Guadalajara, MX"
                         pop="150"
-                        link={"/#/ak-ramayan"}
+                        link={"/ak-ramayan"}
                     />
                     <Event
                         thumbnailID="darshana"
@@ -66,7 +66,7 @@ const Events = () => {
                         date="Nov. 11, 2022"
                         location="Guadalajara, MX"
                         pop="2000"
-                        link={"/#/darshana"}
+                        link={"/darshana"}
                     />
                 </div>
 
