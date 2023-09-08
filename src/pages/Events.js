@@ -37,12 +37,24 @@ const Events = () => {
                     <div className='highlight-event-tags'>
                         <p className='cool-tag'>Every Saturday</p>
                         <p>Guadalajara, MX</p>
-                        <p>March 25, 2023</p>
+                        <p>Sep 9, 2023</p>
                     </div>
                 </div>
                 </a>
 
                 <p className='timing-title'>Past Events</p>
+
+                <div className='events-grid'>
+                    <Event
+                            thumbnailID="hcc_may_thumb"
+                            title="Hindu Cultural Connect 2023"
+                            date="June 3, 2023"
+                            location="Zapopan, MX"
+                            pop="110"
+                            link={"/hindu-cultural-connect"}
+                        />
+                </div>
+
                 <div className='events-grid'>
                     <Event
                         thumbnailID="hhc_thumb"
@@ -68,7 +80,10 @@ const Events = () => {
                         pop="2000"
                         link={"/darshana"}
                     />
+                    
                 </div>
+
+                
 
             </div>
 

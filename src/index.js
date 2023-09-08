@@ -15,6 +15,7 @@ import HHC from './pages/event-pages/hhc';
 import Darshana from './pages/event-pages/darshana';
 import Ramayan from './pages/event-pages/ramayan';
 import Sundarkand from './pages/event-pages/sundarkand'
+import HinduCulturalConnect from './pages/event-pages/HinduCulturalConnect';
 
 
 import Signup from './pages/SignUp';
@@ -41,6 +42,7 @@ root.render(
         <Route path = "/darshana" element = {<Darshana/>}/>
         <Route path = "/ak-ramayan" element = {<Ramayan/>}/>
         <Route path = "/sundarkand" element = {<Sundarkand/>}/>
+        <Route path = "/hindu-cultural-connect" element= {<HinduCulturalConnect/>}/>
         
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/login" element = {<Login/>}/>

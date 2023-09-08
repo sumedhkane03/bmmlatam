@@ -85,6 +85,10 @@
     background-image: url("../assets/events/hhc_thumb.JPG");
 }
 
+#hcc_may_thumb{
+    background-image: url("../assets/events/hcc_may_thumb.jpg");
+}
+
 /* Events Page CSS */
 .events-page-container{
     width: 100vw;
