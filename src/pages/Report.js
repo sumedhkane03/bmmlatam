@@ -27,11 +27,20 @@ const Team = () => {
       {url: require("../assets/gallery/lo4.jpg"), title: "fourth"},
     ];
 
+
+    const containerStylesMob = {
+      width: "375px",
+      height: "210px",
+      margin: "0 auto",
+    };
+
     const containerStyles = {
       width: "750px",
       height: "420px",
-      margin: "0 auto"
+      margin: "0 auto",
     };
+    
+    
 
 
   return (
@@ -106,9 +115,19 @@ const Team = () => {
         <br></br>
         <br></br>
         
+        {(window.innerWidth >  900) && (
         <div style={containerStyles}>
         <ImageSlider slides={slides}/>
         </div>
+        )
+        }
+
+        {(window.innerWidth <  900) && (
+        <div style={containerStylesMob}>
+        <ImageSlider slides={slides}/>
+        </div>
+        )
+        }
 
         <Footer/>
 
