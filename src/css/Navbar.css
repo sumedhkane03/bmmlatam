@@ -312,16 +312,13 @@
 }
 
 .top_logo{
-    /* margin-right: 200px; */
-    /* margin-top: 50px; */
-    /* margin-left: -640px; */
     margin-left: -575px;
     margin-right: 350px;
 
 }
 
 .toplogo{
-    /* border: 2px solid white; */
+
     
     display: flex;
     align-items: center;
@@ -333,8 +330,15 @@
     left: 500px;
 }
 
-
-
-
-
-
+.su{
+    position: relative;
+    font-size: 13px;
+    display: flex;
+    /* background-color: blue; */
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    /* margin-left: -50px; /*default 0 */
+    /* margin-right: -285px; default -180 */
+    left: 270px;
+}
