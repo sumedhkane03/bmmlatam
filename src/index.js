@@ -20,6 +20,7 @@ import HinduCulturalConnect from './pages/event-pages/HinduCulturalConnect';
 
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
 
 import BloodDrive from './pages/BloodDrive';
 
@@ -46,6 +47,7 @@ root.render(
         
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/login" element = {<Login/>}/>
+        <Route path = "/my-profile" element = {<Profile/>}/>
 
         <Route path = "/blood-drive" element = {<BloodDrive/>}/>
 

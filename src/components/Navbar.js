@@ -146,7 +146,7 @@ const Navbar = () => {
                     <Link to='/competitions'><p className='menu-btn'>Competitions</p></Link>
                     <Link to='signup'><p className='menu-btn'>Sign up</p></Link>
 
-                    <p className='menu-btn'>{displayName}</p>
+                    <Link to='/my-profile'><p className='menu-btn'>{displayName}</p></Link>
                     {/* <Link to='/shop'><p className='menu-btn'>Shop</p></Link> */}
                     {/* <Link to='/daytime-dager' target="_blank"><p className='menu-btn'>Darty</p></Link> */}
 
@@ -230,7 +230,7 @@ const Navbar = () => {
                     {/* <Link to='/signup'><p className='nav-btn'>Sign Up</p></Link> */}
                     {(displayName != null) && (
                         <>
-                    <Link to=''><p className='nav-btn'>{displayName}</p></Link>
+                    <Link to='/my-profile'><p className='nav-btn'>{displayName}</p></Link>
 
                     <button className='nav-btn' onClick={handleLogout}>Sign out</button>
                     </>
