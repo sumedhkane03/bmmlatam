@@ -187,6 +187,7 @@ const Navbar = () => {
 
                     <Link to='/signup'><p className='nav-btn'>Sign Up</p></Link>
                     
+                    
                     {/* <Link to='/signup'><p className='nav-btn'>SIGN UP!</p></Link> */}
                     {/*<Link to='/daytime-dager' target="_blank"><p className='nav-btn'>Darty</p></Link>*/}
                     {/* <p className='nav-btn' onClick={comingSoonPop}>Shop</p> */}

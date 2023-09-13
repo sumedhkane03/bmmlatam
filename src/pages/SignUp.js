@@ -9,12 +9,15 @@ import background from '../assets/NitesOut Gradient BG-rainbow.jpg';
 import { db } from '../Firebase';
 
 import '../css/SignUp.css';
+import Alert from '../components/Alert';
  
 const Signup = () => {
     const navigate = useNavigate();
  
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
+
+    const [emailAlr,setEmailAlr] = useState(null);
  
     const onSubmit = async (e) => {
       e.preventDefault()
@@ -51,7 +54,12 @@ const Signup = () => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
+            // setEmailAlr(false);
+            if(error.code === "auth/email-already-in-use"){
+                // setEmailAlr(true);
+                navigate("/login");
+            }
+            // console.log(errorCode, errorMessage);
             // ..
         });
  
@@ -104,6 +112,7 @@ const Signup = () => {
                                 placeholder="Email address"                                
                             />
                         </div>
+                        {emailAlr && (<Alert text={"Email already in use!"}/>) && (console.log("in use alert sent"))}
                         <br></br>
                         <div>
                             <label htmlFor="password">
