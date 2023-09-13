@@ -1,10 +1,10 @@
 import {React, useState, useRef, useEffect} from 'react'
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {MdClose, MdMenu} from 'react-icons/md';
 import { db, auth } from '../Firebase';
 
-import { onAuthStateChanged, getAuth, updateProfile } from "firebase/auth";
+import { onAuthStateChanged, getAuth, updateProfile, signOut } from "firebase/auth";
 
 
 import '../css/Navbar.css'
@@ -12,11 +12,14 @@ import Alert from './Alert';
 
 const Navbar = () => {  
 
+    const navigate = useNavigate();
+
     const userEmail = useRef();
 
     const [invite, setInvite] = useState(false);
     const [waitlist, setWaitlist] = useState(false);
 
+    const [displayName,setDisplayName] = useState(null);
 
     console.log(auth.currentUser);
 
@@ -98,6 +101,7 @@ const Navbar = () => {
               console.log("email: ",user.email)
               console.log("password", user.providerId)
               console.log("name: ", user.displayName)
+              setDisplayName(user.displayName);
             } else {
               // User is signed out
               // ...
@@ -116,6 +120,16 @@ const Navbar = () => {
         }, 400);
     };
 
+    const handleLogout = () => {               
+        signOut(auth).then(() => {
+        // Sign-out successful.
+            console.log("Signed out successfully")
+            window.location.reload(true);
+        }).catch((error) => {
+        // An error happened.
+        });
+    }
+
     const [menu, setMenu] = useState(false);
 
     return (
@@ -132,7 +146,7 @@ const Navbar = () => {
                     <Link to='/competitions'><p className='menu-btn'>Competitions</p></Link>
                     <Link to='signup'><p className='menu-btn'>Sign up</p></Link>
 
-                    <p className='menu-btn'>{userEmail}</p>
+                    <p className='menu-btn'>{displayName}</p>
                     {/* <Link to='/shop'><p className='menu-btn'>Shop</p></Link> */}
                     {/* <Link to='/daytime-dager' target="_blank"><p className='menu-btn'>Darty</p></Link> */}
 
@@ -213,7 +227,15 @@ const Navbar = () => {
                     <Link to='/competitions'><p className='nav-btn'>Competitions</p></Link>
 
 
-                    <Link to='/signup'><p className='nav-btn'>Sign Up</p></Link>
+                    {/* <Link to='/signup'><p className='nav-btn'>Sign Up</p></Link> */}
+                    {(displayName != null) && (
+                        <>
+                    <Link to=''><p className='nav-btn'>{displayName}</p></Link>
+
+                    <button className='nav-btn' onClick={handleLogout}>Sign out</button>
+                    </>
+                    )}
+                    {(displayName === null) && (<Link to='/signup'><p className='nav-btn'>Sign up</p></Link>)}
                     
                     
                     
