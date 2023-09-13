@@ -2,7 +2,10 @@ import {React, useState, useRef, useEffect} from 'react'
 
 import { Link } from 'react-router-dom';
 import {MdClose, MdMenu} from 'react-icons/md';
-import { db } from '../Firebase';
+import { db, auth } from '../Firebase';
+
+import { onAuthStateChanged, getAuth, updateProfile } from "firebase/auth";
+
 
 import '../css/Navbar.css'
 import Alert from './Alert';
@@ -13,6 +16,11 @@ const Navbar = () => {
 
     const [invite, setInvite] = useState(false);
     const [waitlist, setWaitlist] = useState(false);
+
+
+    console.log(auth.currentUser);
+
+
 
     const saveAnswer = (event) => {
         event.preventDefault();
@@ -79,6 +87,26 @@ const Navbar = () => {
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
 
+    useEffect(()=>{
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+              // ...
+              console.log("logged in, uid: ", uid)
+              console.log("email: ",user.email)
+              console.log("password", user.providerId)
+              userEmail = user.email;
+            } else {
+              // User is signed out
+              // ...
+              console.log("user is logged out")
+            }
+          });
+         
+    }, []);
+
     const menuLeave = () => {
         document.getElementById("cool-menu").classList.remove("menu-enter");
         document.getElementById("cool-menu").classList.add("menu-leave");
@@ -104,7 +132,7 @@ const Navbar = () => {
                     <Link to='/competitions'><p className='menu-btn'>Competitions</p></Link>
                     <Link to='signup'><p className='menu-btn'>Sign up</p></Link>
 
-                    
+                    <p className='menu-btn'>{userEmail}</p>
                     {/* <Link to='/shop'><p className='menu-btn'>Shop</p></Link> */}
                     {/* <Link to='/daytime-dager' target="_blank"><p className='menu-btn'>Darty</p></Link> */}
 
@@ -186,6 +214,7 @@ const Navbar = () => {
 
 
                     <Link to='/signup'><p className='nav-btn'>Sign Up</p></Link>
+                    
                     
                     
                     {/* <Link to='/signup'><p className='nav-btn'>SIGN UP!</p></Link> */}

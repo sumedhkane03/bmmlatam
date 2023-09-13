@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import {  createUserWithEmailAndPassword  } from 'firebase/auth';
+import {  createUserWithEmailAndPassword, getAuth, updateProfile  } from 'firebase/auth';
 import { auth } from '../Firebase'
 
 import NavBar from '../components/Navbar';
@@ -16,6 +16,7 @@ const Signup = () => {
  
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
+    const [dpName,setDpName] = useState('');
 
     const [emailAlr,setEmailAlr] = useState(null);
  
@@ -62,7 +63,17 @@ const Signup = () => {
             // console.log(errorCode, errorMessage);
             // ..
         });
- 
+
+    await updateProfile(auth.currentUser, {
+        displayName: dpName
+        }).then(() => {
+        // Profile updated!
+        // ...
+        }).catch((error) => {
+        // An error occurred
+        // ...
+        });
+          
    
     }
  
@@ -98,7 +109,21 @@ const Signup = () => {
 
                     <div className='roundedRectangle'>
 
-                    <form>                                                                                            
+                    <form>
+                        <div>
+                            <label htmlFor="userName">
+                                <b>Display Name: </b>
+                            </label>
+                            <input
+                                
+                                label="Display Name"
+                                value={dpName}
+                                onChange={(e) => setDpName(e.target.value)}  
+                                required                                    
+                                placeholder="Display Name"                                
+                            />
+                        </div>     
+                        <br></br>
                         <div>
                             <label htmlFor="email-address">
                                 <b>Email address: </b>
