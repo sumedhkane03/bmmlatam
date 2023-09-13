@@ -97,7 +97,7 @@ const Navbar = () => {
               console.log("logged in, uid: ", uid)
               console.log("email: ",user.email)
               console.log("password", user.providerId)
-              userEmail = user.email;
+              console.log("name: ", user.displayName)
             } else {
               // User is signed out
               // ...

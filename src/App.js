@@ -68,6 +68,7 @@ const Home = () => {
               console.log("logged in, uid: ", uid)
               console.log("email: ",user.email)
               console.log("password", user.providerId)
+              console.log("name: ", user.displayName)
             } else {
               // User is signed out
               // ...
