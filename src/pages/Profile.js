@@ -33,7 +33,7 @@ const Profile = () => {
               setDisplayName(user.displayName);
               setUserEmail(user.email);
               setUid(user.uid);
-              console.log(user.toJSON());
+            //   console.log(user.toJSON());
             } else {
               // User is signed out
               // ...
@@ -52,7 +52,9 @@ const Profile = () => {
             
             <div className='events-page-container'>
                 <p className='events-page-title'>{displayName}</p>
+                
                 <p className='events-page-title'>{userEmail}</p>
+                
                 <p className='events-page-title'>{uid}</p>
             </div>
             <Footer/>
