@@ -7,6 +7,7 @@ import NavBar from '../components/Navbar';
 import background from '../assets/NitesOut Gradient BG-rainbow.jpg';
 
 import { db } from '../Firebase';
+import Footer from '../components/Footer';
 
 import '../css/SignUp.css';
 import Alert from '../components/Alert';
@@ -176,6 +177,7 @@ const Signup = () => {
 
                     </div>            
                 </div>
+                <Footer/>
             </>
   )
 }

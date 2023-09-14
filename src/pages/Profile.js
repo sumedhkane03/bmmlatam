@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
@@ -28,7 +29,7 @@ const Profile = () => {
               // https://firebase.google.com/docs/reference/js/firebase.User
 
               // ...
-              
+
               setDisplayName(user.displayName);
               setUserEmail(user.email);
               setUid(user.uid);
@@ -54,7 +55,7 @@ const Profile = () => {
                 <p className='events-page-title'>{userEmail}</p>
                 <p className='events-page-title'>{uid}</p>
             </div>
-
+            <Footer/>
         </>
     )
 }

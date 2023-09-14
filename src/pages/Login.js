@@ -4,6 +4,7 @@ import { auth, signInWithGoogle } from '../Firebase';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 import { getAuth, signInWithRedirect } from "firebase/auth";
 
@@ -159,7 +160,7 @@ const Login = () => {
                         </div>
                                                    
                     </div>
-
+            <Footer/>
         </>
     )
 }
