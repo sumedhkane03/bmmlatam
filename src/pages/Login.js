@@ -68,23 +68,39 @@ const Login = () => {
     }, [auth]);
 
        
+    // const onLogin = (e) => {
+    //     e.preventDefault();
+    //     signInWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         // Signed in
+    //         const user = userCredential.user;
+    //         console.log("User logged in successfully", user);
+    //         navigate("/home")
+    //         console.log(user);
+    //     })
+    //     .catch((error) => {
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         console.log(errorCode, errorMessage)
+    //     });
+       
+    // }
     const onLogin = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the default form submission behavior
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log("User logged in successfully", user);
-            navigate("/home")
-            console.log(user);
+            console.log('User logged in:', user);
+            navigate("/home");
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode, errorMessage)
+            console.error('Login error:', errorCode, errorMessage);
         });
-       
     }
+    
  
     return(
         <>
@@ -117,7 +133,7 @@ const Login = () => {
                         
                         <div className='roundedRectangle'>
                             {user == null && (<>
-                        <form>                                              
+                        <form onSubmit={onLogin}>                                              
                             <div>
                                 <label htmlFor="email-address">
                                     <b>Email address: </b>
@@ -151,7 +167,7 @@ const Login = () => {
 
                             <div>
                                 <button                                    
-                                    onClick={(e) => onLogin()}   
+                                    type='submit'   
                                     className='button'                                     
                                 >      
                                     Login                                                                  
