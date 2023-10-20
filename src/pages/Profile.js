@@ -27,9 +27,12 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className='events-page-container'>
-    <div className="profile-container">
-      <Navbar />
+    <>
+    <div className='bg-2 fade-in' id = 'background-2'/>
+
+    <Navbar/>
+
+    <div className="profile-container fade-in">
       <div className="profile-content">
         <div className="profile-header">
           <h1 className="profile-title">{displayName}</h1>
@@ -40,9 +43,11 @@ const Profile = () => {
           {/* You can add more user information here, such as a profile picture or bio */}
         </div>
       </div>
-      <Footer />
+      
     </div>
-    </div>
+    <Footer />
+
+    </>
   );
 };
 
