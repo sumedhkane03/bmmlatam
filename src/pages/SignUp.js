@@ -121,7 +121,9 @@ const Signup = () => {
                                 value={dpName}
                                 onChange={(e) => setDpName(e.target.value)}  
                                 required                                    
-                                placeholder="Display Name"                                
+                                placeholder="Display Name"  
+                                className='form-input'   
+                                type='text'                           
                             />
                         </div>     
                         <br></br>
@@ -154,13 +156,14 @@ const Signup = () => {
                                 pattern='?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'      
                                 title='Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters'        
                             />
-                            <p>Must contain at least one  number, one uppercase <br></br> and lowercase letter,and at least 8 or more characters</p>
+                            <p className='alrHave'>Must contain at least one  number, one uppercase <br></br> and lowercase letter,and at least 8 or more characters</p>
 
                         </div>                                             
                         <br></br>
                         <button
                             type="submit" 
-                            onClick={onSubmit}                        
+                            onClick={onSubmit} 
+                            className='form-button'                       
                         >  
                             Sign up                                
                         </button>
@@ -168,7 +171,7 @@ const Signup = () => {
                         <br></br>                                 
                     </form>
 
-                    <p>
+                    <p className='alrHave'>
                         Already have an account?{' '}
                         <NavLink to="/login" >
                             <b>Sign in </b>

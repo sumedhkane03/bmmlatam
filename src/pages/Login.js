@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {  GoogleAuthProvider, ProviderId, reload, signInWithEmailAndPassword, signInWithEmailLink   } from 'firebase/auth';
 import { auth, signInWithGoogle } from '../Firebase';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { onAuthStateChanged } from "firebase/auth";
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -9,6 +11,8 @@ import Footer from '../components/Footer';
 import { getAuth, signInWithRedirect } from "firebase/auth";
 
 import {signInWithPopup} from "firebase/auth";
+import "../css/Login.css";
+// import "https://use.fontawesome.com/releases/v6.1.1/css/all.css";
 
 const provider = new GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -46,6 +50,23 @@ const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [user, setUser] = useState(null);
+
+    const auth = getAuth();
+
+    useEffect(() => {
+        // Check if a user is already authenticated when the component mounts
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is authenticated
+            setUser(user);
+        } else {
+            // No user is authenticated
+            setUser(null);
+        }
+        });
+    }, [auth]);
+
        
     const onLogin = (e) => {
         e.preventDefault();
@@ -94,6 +115,7 @@ const Login = () => {
                     <div className='events-page-container fade-in'>                                                      
                         
                         <div className='roundedRectangle'>
+                            {user == null && (<>
                         <form>                                              
                             <div>
                                 <label htmlFor="email-address">
@@ -128,7 +150,8 @@ const Login = () => {
 
                             <div>
                                 <button                                    
-                                    onClick={onLogin}                                        
+                                    onClick={onLogin}   
+                                    className='button'                                     
                                 >      
                                     Login                                                                  
                                 </button>
@@ -139,23 +162,32 @@ const Login = () => {
                             
                             <div>
 
-                            <button onClick={GoogleSI}><i className="fab fa-google"></i>Sign in with google</button>
+                            <button className='button-google' onClick={GoogleSI}><i className="fab fa-google"></i>Sign in with google</button>
 
                             </div>
 
                                                 
                         </form>
                        
-                        <p className="text-sm text-white text-center">
+                        <p className="text-sm text-black b text-center">
                             No account yet? {' '}
                             <NavLink to="/signup">
                                 <b>Sign up</b>
                             </NavLink>
                         </p>
-
+                        </>)}
+                        {user && (<>
+                            <div>
+                                <p className="text-sm text-black b text-center">
+                                    You are logged in as {user.email}
+                                </p>
+                            </div>
+                        
                         <div>
-                            <button onClick={handleLogout}>Log out</button>
+                            <button className='button-logout' onClick={handleLogout}>Log out</button>
                         </div>
+                        </>
+                        )}
 
                         </div>
                                                    

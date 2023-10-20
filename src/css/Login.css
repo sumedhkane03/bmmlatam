@@ -1,0 +1,55 @@
+/* Style the buttons */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 5px 0; /* Adjust this value as needed */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .b{
+    color: black;
+  }
+  
+  /* Style the "Sign in with Google" button */
+  .button-google {
+    background-color: #4285F4; /* Google's blue */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px; /* Adjust this value as needed */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-google:hover {
+    background-color: #357ABD; /* Slightly darker blue for hover */
+  }
+  
+  /* Style the "Log out" button */
+  .button-logout {
+    background-color: #dc3545; /* Red color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px; /* Adjust this value as needed */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-logout:hover {
+    background-color: #c82333; /* Slightly darker red for hover */
+  }
+  
