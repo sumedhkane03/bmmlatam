@@ -31,26 +31,17 @@ const Signup = () => {
             console.log(user);
             // ###########################
             
-    db.collection("mail")
-    .add({
-      to: user.email,
-      message: {
-        subject: "Welcome!",
-        html: `
-          Namaste,
-
-          Thank you for signing up for our mailing list.
-
-          Glad to have you as a part of the community.
-
-          OM 🙏, 
-          
-          BMM LATAM
-        `,
-      },
-    });
+            db.collection("user").doc(user.uid)
+            .set({
+                admin: false,
+                email: email,
+                kbreParticipant: false,
+                password: password,
+                username: dpName,
+            },
+            );
             // ###########################
-            navigate("/login")
+            navigate("/login");
             // ...
         })
         .catch((error) => {
