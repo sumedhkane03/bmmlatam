@@ -24,15 +24,17 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    color: black;
   }
   
   .profile-email {
-    color: #777;
+    color: #000000;
   }
   
   .profile-uid {
     margin-top: 10px;
     font-size: 18px;
+    color: black;
   }
   
   /* Add more styles and customize the profile page as needed */
