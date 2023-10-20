@@ -232,7 +232,7 @@ const Navbar = () => {
                         <>
                     <Link to='/my-profile'><p className='nav-btn'>{displayName}</p></Link>
 
-                    <button className='nav-btn' onClick={handleLogout}>Sign out</button>
+                    {/* <button className='nav-btn' onClick={handleLogout}>Sign out</button> */}
                     </>
                     )}
                     {(displayName === null) && (<Link to='/signup'><p className='nav-btn'>Sign up</p></Link>)}
