@@ -129,7 +129,7 @@ const Login = () => {
                 <br></br>
                 <br></br>
                 <br></br>
-                    <div className='events-page-container fade-in'>                                                      
+                    <div className='signup-page-container fade-in'>                                                      
                         
                         <div className='roundedRectangle'>
                             {user == null && (<>
