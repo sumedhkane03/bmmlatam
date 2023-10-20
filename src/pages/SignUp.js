@@ -70,7 +70,7 @@ const Signup = () => {
     }
  
   return (
-            <>
+        <>
                 {/* <div className='bg-2' id = 'background-3'/> */}
                 <div className='bg-2 fade-in' id = 'background-2'/>
                 <NavBar/>
@@ -97,8 +97,8 @@ const Signup = () => {
                 <br></br>
                 <br></br>
 
-               <div className='events-page-container fade-in'>                         
-
+            {/* <div className='events-page-container fade-in'>                          */}
+               <div className='signup-page-container fade-in'>
                     <div className='roundedRectangle'>
 
                     <form>
@@ -169,10 +169,11 @@ const Signup = () => {
                         </NavLink>
                     </p>       
 
-                    </div>            
-                </div>
+                    </div> 
+                </div>           
+            {/* </div> */}
                 <Footer/>
-            </>
+        </>
   )
 }
  

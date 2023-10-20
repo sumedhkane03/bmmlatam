@@ -27,6 +27,7 @@ const Profile = () => {
   }, []);
 
   return (
+    <div className='events-page-container'>
     <div className="profile-container">
       <Navbar />
       <div className="profile-content">
@@ -40,6 +41,7 @@ const Profile = () => {
         </div>
       </div>
       <Footer />
+    </div>
     </div>
   );
 };
