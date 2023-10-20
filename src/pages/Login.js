@@ -150,7 +150,7 @@ const Login = () => {
 
                             <div>
                                 <button                                    
-                                    onClick={onLogin}   
+                                    onClick={(e) => onLogin()}   
                                     className='button'                                     
                                 >      
                                     Login                                                                  
