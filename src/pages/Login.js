@@ -179,7 +179,7 @@ const Login = () => {
                             
                             <div>
 
-                            <button className='button-google' onClick={GoogleSI}><i className="fab fa-google"></i>Sign in with google</button>
+                            <button className='button button-google' onClick={GoogleSI}><i className="fab fa-google"></i>Sign in with google</button>
 
                             </div>
 
@@ -201,7 +201,7 @@ const Login = () => {
                             </div>
                         
                         <div>
-                            <button className='button-logout' onClick={handleLogout}>Log out</button>
+                            <button className='button button-logout' onClick={handleLogout}>Log out</button>
                         </div>
                         </>
                         )}

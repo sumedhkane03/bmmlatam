@@ -16,7 +16,7 @@
     transition: background-color 0.3s;
   }
   
-  button:hover {
+  .button:hover {
     background-color: #0056b3;
   }
   
@@ -59,7 +59,7 @@
 
 /*styles for computers */
 /* Style the buttons */
-button {
+.button {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
