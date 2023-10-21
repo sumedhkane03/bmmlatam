@@ -26,7 +26,7 @@ const Signup = () => {
         //if it does, set emailAlr to true
         //else, set emailAlr to false
         e.preventDefault();
-        if(emailAlr === null){
+        
         
         var docRef = db.collection("user").doc(email);
 
@@ -41,9 +41,7 @@ const Signup = () => {
         }).catch((error) => {
             console.log("Error getting document:", error);
         });
-        }else if(emailAlr === false){
-            onSubmit(e);
-        }
+
     }
 
  
