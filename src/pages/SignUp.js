@@ -25,6 +25,7 @@ const Signup = () => {
         //check if email exists in "user" collection
         //if it does, set emailAlr to true
         //else, set emailAlr to false
+        e.preventDefault();
         if(emailAlr === null){
         
         var docRef = db.collection("user").doc(email);
