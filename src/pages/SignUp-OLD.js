@@ -1,81 +1,135 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase/auth';
-import { auth } from '../Firebase';
+import {  createUserWithEmailAndPassword, getAuth, updateProfile  } from 'firebase/auth';
+import { auth } from '../Firebase'
+
 import NavBar from '../components/Navbar';
+import background from '../assets/NitesOut Gradient BG-rainbow.jpg';
+
 import { db } from '../Firebase';
 import Footer from '../components/Footer';
+
 import '../css/SignUp.css';
 import Alert from '../components/Alert';
-
+ 
 const Signup = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+ 
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('');
+    const [dpName,setDpName] = useState('');
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [dpName, setDpName] = useState('');
-  const [emailAlr, setEmailAlr] = useState(null);
-  const [error, setError] = useState(null);
+    const [emailAlr,setEmailAlr] = useState(null);
 
-  const emailExists = async (e) => {
-    e.preventDefault();
+    const emailExists = (e) => {
+        //check if email exists in "user" collection
+        //if it does, set emailAlr to true
+        //else, set emailAlr to false
+        e.preventDefault();
+        
+        
+        var docRef = db.collection("user").doc(email);
 
-    // Check if email exists in "user" collection
-    var docRef = db.collection("user").doc(email);
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                setEmailAlr(true);
+            } else {
+                // doc.data() will be undefined in this case
+                setEmailAlr(false);
+                onSubmit(e);
+            }
+        }).catch((error) => {
+            console.log("Error getting document:", error);
+        });
 
-    docRef.get().then((doc) => {
-      if (doc.exists) {
-        setEmailAlr(true);
-      } else {
-        setEmailAlr(false);
-        onSubmit(e);
-      }
-    }).catch((error) => {
-      console.log("Error getting document:", error);
-    });
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      console.log(user);
-
-      // Add user data to the database
-      await db.collection("user").doc(user.email).set({
-        admin: false,
-        uid: user.uid,
-        kbreParticipant: false,
-        password: password,
-        username: dpName,
-      });
-
-      // Update user profile
-      await updateProfile(auth.currentUser, {
-        displayName: dpName,
-      });
-
-      navigate("/login");
-    } catch (error) {
-      if (error.code === "auth/email-already-in-use") {
-        setEmailAlr(true);
-        setError("Email already in use.");
-      } else if (error.code === "auth/weak-password") {
-        setError("Password is too weak. Please use a stronger password.");
-      } else if (error.code === "auth/invalid-email") {
-        setError("Invalid email format. Please enter a valid email address.");
-      } else {
-        setError("An error occurred during signup. Please try again.");
-      }
     }
-  };
 
+ 
+    // const onSubmit = async (e) => {
+    //   e.preventDefault()
+     
+    //   await createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         // Signed in
+    //         const user = userCredential.user;
+    //         console.log(user);
+    //         // ###########################
+            
+    //         db.collection("user").doc(user.email)
+    //         .set({
+    //             admin: false,
+    //             uid: user.uid,
+    //             kbreParticipant: false,
+    //             password: password,
+    //             username: dpName,
+    //         },
+    //         );
+    //         // ###########################
+    //         navigate("/login");
+    //         // ...
+    //     })
+    //     .catch((error) => {
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         // setEmailAlr(false);
+    //         if(error.code === "auth/email-already-in-use"){
+    //             // setEmailAlr(true);
+    //             navigate("/login");
+    //         }
+    //         // console.log(errorCode, errorMessage);
+    //         // ..
+    //     });
+
+    //     await updateProfile(auth.currentUser, {
+    //         displayName: dpName
+    //         }).then(() => {
+    //         // Profile updated!
+    //         // ...
+    //         }).catch((error) => {
+    //         // An error occurred
+    //         // ...
+    //         });
+        
+   
+    // };
+    const onSubmit = async (e) => {
+        e.preventDefault();
+      
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+          console.log(user);
+      
+          // Add user data to the database
+          await db.collection("user").doc(user.email).set({
+            admin: false,
+            uid: user.uid,
+            kbreParticipant: false,
+            password: password,
+            username: dpName,
+          });
+      
+          // Update user profile
+          await updateProfile(auth.currentUser, {
+            displayName: dpName,
+          });
+      
+          navigate("/login");
+        } catch (error) {
+          if (error.code === "auth/email-already-in-use") {
+            setEmailAlr(true);
+          } else {
+            console.error("Error during signup:", error);
+            // Handle other errors or display appropriate messages
+          }
+        }
+      };
+      
+ 
   return (
-    <>
-       {/* <div className='bg-2' id = 'background-3'/> */}
-       <div className='bg-2 fade-in' id = 'background-2'/>
+        <>
+                {/* <div className='bg-2' id = 'background-3'/> */}
+                <div className='bg-2 fade-in' id = 'background-2'/>
                 <NavBar/>
                 <div className='loading-bar load-fast'/> 
 
@@ -154,16 +208,15 @@ const Signup = () => {
 
                         </div>                                             
                         <br></br>
-      <button
-        type="button"
-        onClick={emailExists}
-        className="form-button"
-      >
-        Sign up
-      </button>
-      {emailAlr && <Alert text="Email already in use." />}
-      {error && <Alert text={error} />}
-      <br></br>                                 
+                        <button
+                            type="button" 
+                            onClick={emailExists} 
+                            className='form-button'                       
+                        >  
+                            Sign up                                
+                        </button>
+
+                        <br></br>                                 
                     </form>
 
                     <p className='alrHave'>
@@ -177,8 +230,8 @@ const Signup = () => {
                 </div>           
             {/* </div> */}
                 <Footer/>
-    </>
-  );
-};
-
-export default Signup;
+        </>
+  )
+}
+ 
+export default Signup
