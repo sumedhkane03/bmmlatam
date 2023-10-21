@@ -21,7 +21,7 @@ const Signup = () => {
 
     const [emailAlr,setEmailAlr] = useState(null);
 
-    const emailExists = () => {
+    const emailExists = (e) => {
         //check if email exists in "user" collection
         //if it does, set emailAlr to true
         //else, set emailAlr to false
@@ -34,6 +34,7 @@ const Signup = () => {
             } else {
                 // doc.data() will be undefined in this case
                 setEmailAlr(false);
+                onSubmit(e);
             }
         }).catch((error) => {
             console.log("Error getting document:", error);
@@ -42,14 +43,6 @@ const Signup = () => {
 
  
     const onSubmit = async (e) => {
-        //check if email exists in "user" collection
-        //if it does, do not create user
-        //else, create user
-        emailExists();
-        if(emailAlr){
-            console.log("email already exists");
-            return;
-        }else{
       e.preventDefault()
      
       await createUserWithEmailAndPassword(auth, email, password)
@@ -93,7 +86,7 @@ const Signup = () => {
             // An error occurred
             // ...
             });
-        }
+        
    
     };
     
@@ -182,7 +175,7 @@ const Signup = () => {
                         <br></br>
                         <button
                             type="submit" 
-                            onClick={onSubmit} 
+                            onClick={emailExists} 
                             className='form-button'                       
                         >  
                             Sign up                                
