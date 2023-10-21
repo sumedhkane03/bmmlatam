@@ -20,8 +20,36 @@ const Signup = () => {
     const [dpName,setDpName] = useState('');
 
     const [emailAlr,setEmailAlr] = useState(null);
+
+    const emailExists = () => {
+        //check if email exists in "user" collection
+        //if it does, set emailAlr to true
+        //else, set emailAlr to false
+
+        var docRef = db.collection("user").doc(email);
+
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                setEmailAlr(true);
+            } else {
+                // doc.data() will be undefined in this case
+                setEmailAlr(false);
+            }
+        }).catch((error) => {
+            console.log("Error getting document:", error);
+        });
+    }
+
  
     const onSubmit = async (e) => {
+        //check if email exists in "user" collection
+        //if it does, do not create user
+        //else, create user
+        emailExists();
+        if(emailAlr){
+            console.log("email already exists");
+            return;
+        }
       e.preventDefault()
      
       await createUserWithEmailAndPassword(auth, email, password)
@@ -31,10 +59,10 @@ const Signup = () => {
             console.log(user);
             // ###########################
             
-            db.collection("user").doc(user.uid)
+            db.collection("user").doc(user.email)
             .set({
                 admin: false,
-                email: email,
+                uid: user.uid,
                 kbreParticipant: false,
                 password: password,
                 username: dpName,
@@ -56,18 +84,19 @@ const Signup = () => {
             // ..
         });
 
-    await updateProfile(auth.currentUser, {
-        displayName: dpName
-        }).then(() => {
-        // Profile updated!
-        // ...
-        }).catch((error) => {
-        // An error occurred
-        // ...
-        });
+        await updateProfile(auth.currentUser, {
+            displayName: dpName
+            }).then(() => {
+            // Profile updated!
+            // ...
+            }).catch((error) => {
+            // An error occurred
+            // ...
+            });
           
    
-    }
+    };
+    
  
   return (
         <>
