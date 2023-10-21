@@ -25,7 +25,8 @@ const Signup = () => {
         //check if email exists in "user" collection
         //if it does, set emailAlr to true
         //else, set emailAlr to false
-
+        if(emailAlr === null){
+        
         var docRef = db.collection("user").doc(email);
 
         docRef.get().then((doc) => {
@@ -39,6 +40,9 @@ const Signup = () => {
         }).catch((error) => {
             console.log("Error getting document:", error);
         });
+        }else if(emailAlr === false){
+            onSubmit(e);
+        }
     }
 
  
