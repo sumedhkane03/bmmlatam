@@ -49,7 +49,7 @@ const Signup = () => {
         if(emailAlr){
             console.log("email already exists");
             return;
-        }
+        }else{
       e.preventDefault()
      
       await createUserWithEmailAndPassword(auth, email, password)
@@ -93,7 +93,7 @@ const Signup = () => {
             // An error occurred
             // ...
             });
-          
+        }
    
     };
     
