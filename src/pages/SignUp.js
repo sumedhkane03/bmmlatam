@@ -74,7 +74,7 @@ const Signup = () => {
 
   return (
     <>
-       {/* <div className='bg-2' id = 'background-3'/> */}
+
        <div className='bg-2 fade-in' id = 'background-2'/>
                 <NavBar/>
                 <div className='loading-bar load-fast'/> 
@@ -100,82 +100,82 @@ const Signup = () => {
                 <br></br>
                 <br></br>
 
-            {/* <div className='events-page-container fade-in'>                          */}
-               <div className='signup-page-container fade-in'>
+              <div className='signup-page-container fade-in'>
                     <div className='roundedRectangle'>
 
-                    <form>
-                        <div>
-                            <label htmlFor="userName">
-                                <b>Display Name: </b>
-                            </label>
-                            <input
-                                
-                                label="Display Name"
-                                value={dpName}
-                                onChange={(e) => setDpName(e.target.value)}  
-                                required                                    
-                                placeholder="Display Name"  
-                                className='form-input'   
-                                type='text'                           
-                            />
-                        </div>     
-                        <br></br>
-                        <div>
-                            <label htmlFor="email-address">
-                                <b>Email address: </b>
-                            </label>
-                            <input
-                                type="email"
-                                label="Email address"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}  
-                                required                                    
-                                placeholder="Email address"                                
-                            />
-                        </div>
-                        {emailAlr && (<Alert text={"Email already in use!"}/>) && (console.log("in use alert sent"))}
-                        <br></br>
-                        <div>
-                            <label htmlFor="password">
-                                <b>Password: </b>
-                            </label>
-                            <input
-                                type="password"
-                                label="Create password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)} 
-                                required                                 
-                                placeholder="Password"
-                                pattern='?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'      
-                                title='Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters'        
-                            />
-                            <p className='alrHave'>Must contain at least one  number, one uppercase <br></br> and lowercase letter,and at least 8 or more characters</p>
+                      <form>
+                          <div>
+                              <label htmlFor="userName">
+                                  <b>Display Name: </b>
+                              </label>
+                              <input
+                                  
+                                  label="Display Name"
+                                  value={dpName}
+                                  onChange={(e) => setDpName(e.target.value)}  
+                                  required                                    
+                                  placeholder="Display Name"  
+                                  className='form-input'   
+                                  type='text'                           
+                              />
+                          </div>     
+                          <br></br>
+                          <div>
+                              <label htmlFor="email-address">
+                                  <b>Email address: </b>
+                              </label>
+                              <input
+                                  type="email"
+                                  label="Email address"
+                                  value={email}
+                                  onChange={(e) => setEmail(e.target.value)}  
+                                  required                                    
+                                  placeholder="Email address"                                
+                              />
+                          </div>
+                          {emailAlr && (<Alert text={"Email already in use!"}/>) && (console.log("in use alert sent"))}
+                          <br></br>
+                          <div>
+                              <label htmlFor="password">
+                                  <b>Password: </b>
+                              </label>
+                              <input
+                                  type="password"
+                                  label="Create password"
+                                  value={password}
+                                  onChange={(e) => setPassword(e.target.value)} 
+                                  required                                 
+                                  placeholder="Password"
+                                  pattern='?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'      
+                                  title='Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters'        
+                              />
+                              <p className='alrHave'>Must contain at least one  number, one uppercase <br></br> and lowercase letter,and at least 8 or more characters</p>
 
-                        </div>                                             
-                        <br></br>
-      <button
-        type="button"
-        onClick={emailExists}
-        className="form-button"
-      >
-        Sign up
-      </button>
-      {emailAlr && <Alert text="Email already in use." />}
-      {error && <Alert text={error} />}
-      <br></br>                                 
-                    </form>
+                          </div>                                             
+                          <br></br>
+                          <button
+                            type="button"
+                            onClick={emailExists}
+                            className="form-button"
+                          >
+                            Sign up
+                          </button>
+                          {error && <Alert text={error} />}
+                          <br></br>                                 
+                      </form>
 
-                    <p className='alrHave'>
-                        Already have an account?{' '}
-                        <NavLink to="/login" >
-                            <b>Sign in </b>
-                        </NavLink>
-                    </p>       
+                          <p className='alrHave'>
+                              Already have an account?{' '}
+                              <NavLink to="/login" >
+                                  <b>Sign in </b>
+                              </NavLink>
+                          </p>       
 
+                      <p className='alrHave'>
+                        <b className='errr'>{error}</b>
+                      </p>
                     </div> 
-                </div>           
-            {/* </div> */}
+              </div>           
                 <Footer/>
     </>
   );

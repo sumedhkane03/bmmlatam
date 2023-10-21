@@ -77,3 +77,6 @@ input[type="password"] {
     height: 100vh;
   }
   
+  .errr{
+    color: red;
+  }
