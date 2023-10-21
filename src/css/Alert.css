@@ -24,18 +24,18 @@
 }
 
 #cookies{
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 .alert-icon{
     width: 30px;
     height: 30px;
-    color: white;
+    color: red;
 }
 
 .alert-text{
     font-size: 12px;
-    color: white;
+    color: black;
     margin-left: 10px;
 }
 
