@@ -179,7 +179,7 @@ const Signup = () => {
                         </div>                                             
                         <br></br>
                         <button
-                            type="submit" 
+                            type="button" 
                             onClick={emailExists} 
                             className='form-button'                       
                         >  
