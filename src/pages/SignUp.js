@@ -45,54 +45,86 @@ const Signup = () => {
     }
 
  
-    const onSubmit = async (e) => {
-      e.preventDefault()
+    // const onSubmit = async (e) => {
+    //   e.preventDefault()
      
-      await createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user);
-            // ###########################
+    //   await createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         // Signed in
+    //         const user = userCredential.user;
+    //         console.log(user);
+    //         // ###########################
             
-            db.collection("user").doc(user.email)
-            .set({
-                admin: false,
-                uid: user.uid,
-                kbreParticipant: false,
-                password: password,
-                username: dpName,
-            },
-            );
-            // ###########################
-            navigate("/login");
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // setEmailAlr(false);
-            if(error.code === "auth/email-already-in-use"){
-                // setEmailAlr(true);
-                navigate("/login");
-            }
-            // console.log(errorCode, errorMessage);
-            // ..
-        });
+    //         db.collection("user").doc(user.email)
+    //         .set({
+    //             admin: false,
+    //             uid: user.uid,
+    //             kbreParticipant: false,
+    //             password: password,
+    //             username: dpName,
+    //         },
+    //         );
+    //         // ###########################
+    //         navigate("/login");
+    //         // ...
+    //     })
+    //     .catch((error) => {
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         // setEmailAlr(false);
+    //         if(error.code === "auth/email-already-in-use"){
+    //             // setEmailAlr(true);
+    //             navigate("/login");
+    //         }
+    //         // console.log(errorCode, errorMessage);
+    //         // ..
+    //     });
 
-        await updateProfile(auth.currentUser, {
-            displayName: dpName
-            }).then(() => {
-            // Profile updated!
-            // ...
-            }).catch((error) => {
-            // An error occurred
-            // ...
-            });
+    //     await updateProfile(auth.currentUser, {
+    //         displayName: dpName
+    //         }).then(() => {
+    //         // Profile updated!
+    //         // ...
+    //         }).catch((error) => {
+    //         // An error occurred
+    //         // ...
+    //         });
         
    
-    };
-    
+    // };
+    const onSubmit = async (e) => {
+        e.preventDefault();
+      
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+          console.log(user);
+      
+          // Add user data to the database
+          await db.collection("user").doc(user.email).set({
+            admin: false,
+            uid: user.uid,
+            kbreParticipant: false,
+            password: password,
+            username: dpName,
+          });
+      
+          // Update user profile
+          await updateProfile(auth.currentUser, {
+            displayName: dpName,
+          });
+      
+          navigate("/login");
+        } catch (error) {
+          if (error.code === "auth/email-already-in-use") {
+            setEmailAlr(true);
+          } else {
+            console.error("Error during signup:", error);
+            // Handle other errors or display appropriate messages
+          }
+        }
+      };
+      
  
   return (
         <>
