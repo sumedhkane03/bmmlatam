@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.34d77821.css",
+    "main.js": "/static/js/main.2f87c4dc.js",
+    "static/media/lo1.jpg": "/static/media/lo1.c20242bb32e0b967c2f8.jpg",
+    "static/media/lo5.jpg": "/static/media/lo5.311222b9919fe074b70a.jpg",
+    "static/media/hcc_may_thumb.jpg": "/static/media/hcc_may_thumb.587ede87955e7f1f4784.jpg",
+    "static/media/lo4.jpg": "/static/media/lo4.acde9dc96b1527e2e9b2.jpg",
+    "static/media/lo6.jpg": "/static/media/lo6.d0751c372ef62322b996.jpg",
+    "static/media/hhc_thumb.JPG": "/static/media/hhc_thumb.b3f7c36b1beb26ea8a00.JPG",
+    "static/media/darshana.jpeg": "/static/media/darshana.881b29084e6bb2a3567a.jpeg",
+    "static/media/NitesOut Gradient BG-rainbow.jpg": "/static/media/NitesOut Gradient BG-rainbow.1ce03378aba0c8d717e3.jpg",
+    "static/media/NitesOut Gradient BG-rainbow2.jpg": "/static/media/NitesOut Gradient BG-rainbow2.1ce03378aba0c8d717e3.jpg",
+    "static/media/NitesOut Gradient BG.jpg": "/static/media/NitesOut Gradient BG.1ce03378aba0c8d717e3.jpg",
+    "static/media/sundarkhand.jpg": "/static/media/sundarkhand.ef9fbd71a0210ee3bfdf.jpg",
+    "static/media/alt-BG.jpg": "/static/media/alt-BG.8cb7bee77dab6c7b8e9b.jpg",
+    "static/media/lo3.jpg": "/static/media/lo3.6be38fd28c3d1fd4452f.jpg",
+    "static/media/ShriRam.png": "/static/media/ShriRam.d7f9cdfa0d9b7f4171ef.png",
+    "static/media/AK_ramayan.jpg": "/static/media/AK_ramayan.b2fb470f6ad4efc9f248.jpg",
+    "static/media/omLogo.png": "/static/media/omLogo.9017ca16e2c5aaa141d7.png",
+    "static/media/lo2.jpg": "/static/media/lo2.1c228d6a2eec7b0df481.jpg",
+    "static/media/cornerlogo.png": "/static/media/cornerlogo.dbc7c8290ea00c881123.png",
+    "static/media/contactlogo.png": "/static/media/contactlogo.153f616f0f8a81ef5bf1.png",
+    "static/media/hsslogo.png": "/static/media/hsslogo.153f616f0f8a81ef5bf1.png",
+    "index.html": "/index.html",
+    "main.34d77821.css.map": "/static/css/main.34d77821.css.map",
+    "main.2f87c4dc.js.map": "/static/js/main.2f87c4dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34d77821.css",
+    "static/js/main.2f87c4dc.js"
+  ]
+}

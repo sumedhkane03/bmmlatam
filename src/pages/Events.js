@@ -32,12 +32,21 @@ const Events = () => {
             <div className='events-page-content'>
                 <p className='timing-title'>Upcoming Events</p>
 
-                <a href="/sundarkand" >
+                {/* <a href="/sundarkand" >
                 <div className='highlight-event'>
                     <div className='highlight-event-tags'>
                         <p className='cool-tag'>Every Saturday</p>
                         <p>Guadalajara, MX</p>
                         <p>Sep 9, 2023</p>
+                    </div>
+                </div>
+                </a> */}
+                <a href="https://us02web.zoom.us/j/86495465186?pwd=VXhhM2xwaG0wTTd6UktjdklDOHhOUT09" >
+                <div className='highlight-event'>
+                    <div className='highlight-event-tags'>
+                        <p className='cool-tag'>Daily 6:30 - 7:00 AM Mexico Time</p>
+                        <p>Virtually on Zoom, Contact Us for the Link</p>
+                        <p>Click to join meeting</p>
                     </div>
                 </div>
                 </a>
