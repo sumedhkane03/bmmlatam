@@ -24,7 +24,7 @@ const Footer = () => {
             */}
         </div>
 
-        <p>bharatmahotsav.mx@gmail.com</p>
+        <p>contact@bmmlatam.org</p>
 
     </div>
   )
