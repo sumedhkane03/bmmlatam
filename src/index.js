@@ -9,6 +9,7 @@ import Events from './pages/Events';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Competitons from './pages/Competitions';
+import Sewa from './pages/Sewa';
 
 //Events
 import HHC from './pages/event-pages/hhc';
@@ -37,6 +38,7 @@ root.render(
         <Route path = "/events" element = {<Events/>}/>
         <Route path = "/gallery" element = {<Gallery/>}/>
         <Route path = "/contact" element = {<Contact/>}/>
+        <Route path='/sewa' element = {<Sewa/>}/>
         <Route path = "/competitions" element = {<Competitons/>}/>
         
         <Route path = "/hhc" element = {<HHC/>}/>

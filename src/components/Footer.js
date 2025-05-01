@@ -3,6 +3,7 @@ import '../css/Footer.css'
 
 import { FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { MdEmail } from 'react-icons/md'
 
 const Footer = () => {
   return (
@@ -24,7 +25,8 @@ const Footer = () => {
             */}
         </div>
 
-        <p>contact@bmmlatam.org</p>
+        {/* href='mailto:contact@bmmlatam.org' */}
+        <p className='text-white' ><a href='mailto:contact@bmmlatam.org'><MdEmail className='text-white '/> </a>  contact@bmmlatam.org</p>
 
     </div>
   )

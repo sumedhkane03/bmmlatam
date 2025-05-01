@@ -143,7 +143,8 @@ const Navbar = () => {
                     <Link to='/about'><p className='menu-btn'>About us</p></Link>
                     <Link to='/gallery'><p className='menu-btn'>Gallery</p></Link>
                     <Link to='/contact'><p className='menu-btn'>Contact us</p></Link>
-                    <Link to='/competitions'><p className='menu-btn'>Competitions</p></Link>
+                    <Link to='/sewa'><p className='menu-btn'>Social Work</p></Link>
+                    {/* <Link to='/competitions'><p className='menu-btn'>Competitions</p></Link> */}
                     <Link to='signup'><p className='menu-btn'>Sign up</p></Link>
 
                     <Link to='/my-profile'><p className='menu-btn'>{displayName}</p></Link>
@@ -224,7 +225,8 @@ const Navbar = () => {
 
                     <Link to='/gallery'><p className='nav-btn'>Gallery</p></Link>
                     <Link to='/contact'><p className='nav-btn'>Contact us</p></Link>
-                    <Link to='/competitions'><p className='nav-btn'>Competitions</p></Link>
+                    <Link to='/sewa'><p className='menu-btn'>Social Work</p></Link>
+                    {/* <Link to='/competitions'><p className='nav-btn'>Competitions</p></Link> */}
 
 
                     {/* <Link to='/signup'><p className='nav-btn'>Sign Up</p></Link> */}
